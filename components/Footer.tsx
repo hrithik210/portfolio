@@ -15,10 +15,10 @@ const Footer = () => {
             <h2 className='heading lg:max-w-[45vw]'>
                 <span className='text-purple '> Connect </span> with me
             </h2>
-            <p className='text-white-200 md:top-10 my-5 text-center'>Reach out to me</p>
+            <p className='text-white-200 md:top-10 my-5 text-center font-medium'>get in touch</p>
             <a href="mailto:hrithikkumar79@outlook.com">
                 <Button 
-                    title='get in touch'
+                    title='Connect with me'
                     icon={<FaLocationArrow />}
                     position='right'
                 />

@@ -7,7 +7,7 @@ export const navItems = [
   export const gridItems = [
     {
       id: 1,
-      title: "I prioritize client collaboration, fostering open communication ",
+      title: "Turning ideas into reality with clean code and practical solutions.",
       description: "",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
@@ -36,7 +36,7 @@ export const navItems = [
     },,
     {
       id: 6,
-      title: "Do you want to start a project together?",
+      title: "want to start a project together?",
       description: "",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
@@ -78,6 +78,7 @@ export const navItems = [
       des: "Data exploration and machine learning models to predict trip durations using the NYC Taxi Trip Duration dataset.",
       img: "/taxi.jpg", 
       iconLists: ["/python.svg", "/ml.jpg",], 
+      link: "https://github.com/hrithik210/Cab-fare-predictions",
     },
   ];
   

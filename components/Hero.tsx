@@ -1,50 +1,38 @@
-import React from 'react'
-import { Spotlight } from './ui/Spotlight'
-import { TextGenerateEffect } from './ui/text-generate-effect'
-import Button from './ui/Button'
-import { FaLocationArrow } from 'react-icons/fa'
+import Image from 'next/image'
 
-const Hero = () => {
+export default function Component() {
   return (
-    <div className='pb-20 pt-36'>
-        <div>
-            <Spotlight className='-top-40 -left-10 md:-left-32 
-            md:-top-20 h-screen' fill='white' />
-            <Spotlight className='top-10 left-full md:-left-32 
-            md:-top-20 h-[80vh] w-[50vw]' fill='purple' />
-            <Spotlight className='top-28 left-80 md:-left-32 
-            md:-top-20 h-[80vh] w-[50vw]' fill='blue' />
-        </div>
-        
-        <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03]
-                  bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0 ">
-          <div className="absolute pointer-events-none inset-0 
-              flex items-center justify-center dark:bg-black-100 bg-white
-              [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-        </div>
+    <div className="relative w-full min-h-screen bg-[#0a0a1e] overflow-hidden flex items-center">
+     
+      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#2F1533] to-transparent"></div>
       
-      <div className='flex justify-center relative my-20'>
-        <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw]
-            flex flex-col justify-center items-center'>
-        
-          <TextGenerateEffect
-            className='text-center text-[40px] md:text-5xl lg:text-6xl'
-            words='Yokkoso Watashino Portfolio society '
-          />
-          <p className='text-center mb-4 text-sm md:text-lg lg:text-2xl md:tracking-wider  '>
-            Hi, I am Ramanand (a.k.a. Hrithik) From India
+      <div className="absolute inset-0 bg-grid-white/[0.02] -z-10" />
+      
+
+      <div className="relative z-10 flex items-center justify-between w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       
+        <div className="max-w-xl">
+          <h1 className="text-4xl font-bold text-white mb-2">
+            <span className="text-purple">Yokkoso Watashino Portfolio</span> society
+          </h1>
+          <p className="text-xl text-gray-300 mb-6 mt-2">
+            I'm Ramanand (a.k.a. Hrithik) From India
           </p>
-          <a href='#'>
-            <Button 
-              title= {'see my work'}
-              icon= { <FaLocationArrow /> } 
-              position='right'
-            />
-          </a>
+  
         </div>
-      </div>  
- =</div>
+        
+    
+        <div className="relative w-[400px] h-[400px]">
+          <Image
+            src="/aizen1.png"
+            alt="Portfolio image"
+            width={400}
+            height={400}
+            objectFit="cover"
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
   )
 }
-
-export default Hero
