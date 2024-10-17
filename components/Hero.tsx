@@ -16,7 +16,7 @@ export default function Component() {
             <span className="text-purple">Yokkoso Watashino Portfolio</span> society
           </h1>
           <p className="text-xl text-gray-300 mb-6 mt-2">
-            I'm Ramanand (a.k.a. Hrithik) From India
+            I&apos;m Ramanand (a.k.a. Hrithik) From India
           </p>
   
         </div>
