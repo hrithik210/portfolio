@@ -157,7 +157,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         .showAtmosphere(defaultProps.showAtmosphere)
         .atmosphereColor(defaultProps.atmosphereColor)
         .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor((_e) => {
+        .hexPolygonColor(() => {
           return defaultProps.polygonColor;
         });
       startAnimation();
@@ -173,17 +173,17 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
       .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
       .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      .arcColor((e: any) => (e as { color: string }).color)
+      .arcColor((e: number) => data[e].color)
       .arcAltitude((e) => {
         return (e as { arcAlt: number }).arcAlt * 1;
       })
-      .arcStroke((_e) => {
+      .arcStroke(() => {
         return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
       })
       .arcDashLength(defaultProps.arcLength)
       .arcDashInitialGap((e) => (e as { order: number }).order * 1)
       .arcDashGap(15)
-      .arcDashAnimateTime((_e) => defaultProps.arcTime);
+      .arcDashAnimateTime(() => defaultProps.arcTime);
 
     globeRef.current
       .pointsData(data)
@@ -194,7 +194,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     globeRef.current
       .ringsData([])
-      .ringColor((e: any) => (t: any) => e.color(t))
+      .ringColor((e: any) => (e as { color: (t: number) => string }).color)
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
       .ringRepeatPeriod(

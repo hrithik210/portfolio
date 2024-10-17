@@ -32,7 +32,7 @@ const Hero = () => {
             words='Yokkoso Watashino Portfolio society '
           />
           <p className='text-center mb-4 text-sm md:text-lg lg:text-2xl md:tracking-wider  '>
-            Hi, I&apos;m Ramanand (a.k.a. Hrithik) From India
+            Hi, I am Ramanand (a.k.a. Hrithik) From India
           </p>
           <a href='#'>
             <Button 
