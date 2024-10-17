@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./grradient-bg";
 import { GlobeDemo } from "./Grid-Globe";
 import { skills } from "@/data/grid-items";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import animationData from "@/data/confetti.json";
 import Button from "./Button";
 import { IoCopyOutline } from "react-icons/io5";
@@ -33,8 +33,6 @@ export const BentoGridItem = ({
   className,
   title,
   description,
-  header,
-  icon,
   id,
   img, 
   imgClassName,
@@ -45,8 +43,6 @@ export const BentoGridItem = ({
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
-  header?: React.ReactNode;
-  icon?: React.ReactNode;
   id? : number
   img?: string
   imgClassName?: string
@@ -131,7 +127,7 @@ export const BentoGridItem = ({
 
             {id === 6 && (
               <div className="mt-5 relative">
-                <div className={`absolute -bottom-5 right-0`}>'
+                <div className={`absolute -bottom-5 right-0`}>
                   <Lottie options={{
                     loop : copied ,
                     autoplay : copied,

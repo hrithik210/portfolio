@@ -1,7 +1,6 @@
 import { projects } from '@/data/grid-items'
 import React from 'react'
 import { PinContainer } from './ui/3d-pin'
-import { div } from 'framer-motion/client'
 import { FaLocationArrow } from 'react-icons/fa'
 
 const RecentProjects = () => {
