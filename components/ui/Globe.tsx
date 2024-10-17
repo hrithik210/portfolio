@@ -173,7 +173,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
       .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
       .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      .arcColor((e: number) => data[e].color)
+      .arcColor((e: number) => data[e]?.color || '#ffffff')
       .arcAltitude((e) => {
         return (e as { arcAlt: number }).arcAlt * 1;
       })
@@ -188,7 +188,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     globeRef.current
       .pointsData(data)
       .pointColor((e) => (e as { color: string }).color)
-      .pointsMerge(true)
+      .pointsMerge(true as any)
       .pointAltitude(0.0)
       .pointRadius(2);
 
