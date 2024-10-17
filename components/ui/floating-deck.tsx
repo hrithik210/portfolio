@@ -1,93 +1,23 @@
 import { cn } from "@/lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
 export const FloatingDock = ({
   items,
-  desktopClassName,
-  mobileClassName,
-}: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
-  desktopClassName?: string;
-  mobileClassName?: string;
-}) => {
-  return (
-    <div className="w-full">
-      <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
-    </div>
-  );
-};
-
-const FloatingDockMobile = ({
-  items,
   className,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className={cn("relative block md:hidden bg-gray-50 dark:bg-neutral-900 p-4 rounded-xl", className)}>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId="nav"
-            className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2 items-center"
-          >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: { delay: idx * 0.05 },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <Link
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={item.title}
-                  className="h-10 w-10 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center hover:scale-110 transition-transform"
-                >
-                  <div className="h-4 w-4">{item.icon}</div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center mx-auto hover:scale-110 transition-transform"
-      >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
-      </button>
-    </div>
-  );
-};
-
-const FloatingDockDesktop = ({
-  items,
-  className,
-}: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
-  className?: string;
-}) => {
-  const  mouseX = useMotionValue(Infinity);
+  const mouseX = useMotionValue(Infinity);
   
   return (
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 justify-center items-center gap-8 bg-gray-50 dark:bg-neutral-900 px-8 rounded-xl",
+        "mx-auto flex h-16 justify-center items-center gap-8 bg-gray-50 dark:bg-neutral-900 px-8 rounded-xl",
         className
       )}
     >
@@ -118,7 +48,6 @@ function IconContainer({
 
   const widthTransform = useTransform(distance, [-150, 0, 150], [40, 60, 40]);
   const heightTransform = useTransform(distance, [-150, 0, 150], [40, 60, 40]);
-
   const widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 28, 20]);
   const heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 28, 20]);
 
