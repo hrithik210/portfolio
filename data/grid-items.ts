@@ -83,8 +83,8 @@ export const navItems = [
   ];
   
 export const skills = [
-    'JavaScript', 'TypeScript', 'React','Tailwind', 'Next.js',
+    'JavaScript', 'TypeScript','Python', 'React','Next.js', 'Tailwind', 
     'Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Prisma', 'Docker',
-    'Data Structures & Algorithms', 'Git', 'GitHub' ,'Python', 'HTML', 'CSS', 'MySQL',
+    'MySQL', 'Git', 'GitHub' ,'Python', 'HTML', 'CSS',
     'AWS', 'Cloudflare workers'
   ]
