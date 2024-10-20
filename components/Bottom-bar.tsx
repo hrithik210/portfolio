@@ -7,7 +7,7 @@ const data = [
   {
     title: "Resume",
     icon: <FileText />,
-    href: "https://drive.google.com/file/d/1h-N_6xBZG8TQsmSRQB3V2foD1FhKRT8_/view"
+    href: "hhttps://drive.google.com/file/d/1ZIrqZYdBWc8Rg1DhKCr9_j_XA78dztDZ/view"
   },
   {
     title: "Github",
@@ -27,7 +27,7 @@ const data = [
   {
     title: "Leetcode",
     icon: <IconBrandLeetcode />,
-    href: "https://leetcode.com/studyplan/top-interview-150/"
+    href: "https://leetcode.com/u/ramanand_nayak/"
   },
   {
     title: "Mail",
