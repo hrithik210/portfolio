@@ -38,7 +38,7 @@ const data = [
 
 export const BottomBar = () => {
   return (
-    <FloatingDock  className="relative mt-10 z-30 border hover:border-0" 
+    <FloatingDock  className="mt-10 z-30 border hover:border-0" 
       items={data} 
     />
   );
