@@ -66,20 +66,22 @@ export const navItems = [
     },
     {
       id: 3,
+      title: "Crypto Wallet",
+      des: "A Web3 crypto wallet that generates public and private keys for Ethereum and Solana, built with Next.js, TypeScript, and Web3.js.",
+      img: "/id3.png",
+      iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/vercel.svg"],
+      link: "https://crypto-wallet-blue.vercel.app/",
+    },
+    
+    {
+      id: 4,
       title: "Movies Recommender System",
       des: "An advanced movie recommender system using collaborative filtering and content-based algorithms, optimized for performance and scalability.",
       img: "/movie-recommender.jpg", 
       iconLists: ["/python.svg", "/ml.jpg",],
       link: "https://github.com/hrithik210/Movies-recommender-system",
     },
-    {
-      id: 4,
-      title: "Exploring and Predicting NYC Taxi Trip Durations",
-      des: "Data exploration and machine learning models to predict trip durations using the NYC Taxi Trip Duration dataset.",
-      img: "/taxi.jpg", 
-      iconLists: ["/python.svg", "/ml.jpg",], 
-      link: "https://github.com/hrithik210/Cab-fare-predictions",
-    },
+   
   ];
   
 export const skills = [
