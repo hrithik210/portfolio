@@ -15,11 +15,11 @@ export default function Component() {
             words="Yokkoso Watashino Portfolio society"
             className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4"
           />
-          <p className="text-lg sm:text-xl text-gray-300 mb-4 font-semibold">
+          <p className="text-lg sm:text-xl text-gray-300 mb-4 font-semibold text-center ">
             I&apos;m Ramanand (a.k.a. Hrithik)
           </p>
-          <div className='font-semibold text-base sm:text-lg'>
-            A Full Stack <span className='text-purple'>Developer from india</span>
+          <div className='font-semibold text-base sm:text-lg text-center'>
+          A Full Stack <span className='text-purple'>Developer</span> exploring the future of <span className='text-purple'>Web3</span>.
           </div>
         </div>
     
