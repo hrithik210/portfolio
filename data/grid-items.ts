@@ -50,6 +50,14 @@ export const navItems = [
   export const projects = [
     {
       id: 1,
+      title: "Airnote",
+      des: "A real-time messaging app that enables instant communication using Next.js, TypeScript, Prisma, and Pusher, with secure authentication via NextAuth.",
+      img: "/airnote.png",
+      iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/prisma.svg", "/pusher.svg"],
+      link: "https://airnote-ebon.vercel.app/",
+    },
+    {
+      id: 2,
       title: "Medium-Blog Platform",
       des: "A full-stack blog platform with user authentication, allowing users to view and post blogs. Deployed on Cloudflare Workers and Vercel for scalability and performance.",
       img: "/medium-blog.png",
@@ -57,7 +65,7 @@ export const navItems = [
       link: "https://medium-blog-blush-sigma.vercel.app/", 
     },
     {
-      id: 2,
+      id: 3,
       title: "Chat-with-Website",
       des: "A chat application enabling real-time conversations with any website, utilizing Next.js, Redis for session management, and TypeScript for type safety.",
       img: "/chat-with-website.png",
@@ -65,7 +73,7 @@ export const navItems = [
       link: "https://ai-chatbot-steel-six.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Crypto Wallet",
       des: "A Web3 crypto wallet that generates public and private keys for Ethereum and Solana, built with Next.js, TypeScript, and Web3.js.",
       img: "/id3.png",
@@ -73,14 +81,6 @@ export const navItems = [
       link: "https://crypto-wallet-blue.vercel.app/",
     },
     
-    {
-      id: 4,
-      title: "Movies Recommender System",
-      des: "An advanced movie recommender system using collaborative filtering and content-based algorithms, optimized for performance and scalability.",
-      img: "/movie-recommender.jpg", 
-      iconLists: ["/python.svg", "/ml.jpg",],
-      link: "https://github.com/hrithik210/Movies-recommender-system",
-    },
    
   ];
   
