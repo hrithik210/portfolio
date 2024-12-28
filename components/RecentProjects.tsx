@@ -9,7 +9,7 @@ const RecentProjects = () => {
        <h1 className='heading'>
             Recent  <span className='bg-clip-text text-transparent bg-gradient-to-r from-purple to-blue-400'>Projects</span>
        </h1>
-       <div className='flex flex-wrap items-center justify-center gap-x-24'>
+       <div className='flex flex-wrap items-center justify-center gap-x-24 gap-y-4'>
             {projects.map(({id ,title , des , img , iconLists , link}) => (
                 <div className='sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex 
                     justify-center items-center sm:w-[570px] w-[80vw] ' key={id}>
