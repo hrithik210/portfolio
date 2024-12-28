@@ -23,9 +23,6 @@ const Footer = () => {
                     position='right'
                 />
             </a>
-            <div className="relative z-40">
-                <BottomBar />
-            </div>
         </div>
     </footer>
   )
