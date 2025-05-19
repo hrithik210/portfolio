@@ -14,7 +14,7 @@ const socialLinks = [
     title: "Github",
     icon: <Github />,
     href: "https://github.com/hrithik210"
-  },
+  },👋
   {
     title: "Twitter",
     icon: <Twitter />,
@@ -53,7 +53,7 @@ export default function Hero() {
         <div className="max-w-2xl w-full space-y-8 text-center lg:text-left">
           <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple to-blue-400">
-              Yokkoso Watashino Portfolio 
+              Bonjour 👋 
             </h1>
             
             <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium">
