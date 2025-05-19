@@ -7,7 +7,7 @@ const data = [
   {
     title: "Resume",
     icon: <FileText />,
-    href: "https://drive.google.com/file/d/1hGMIQtPNEgHc7x8BYtVl8JERaRv8JV5w/view"
+    href: "https://drive.google.com/file/d/1D_BbUzEN_ODn3o0uQqvV8V99EuZVtMTS/view"
   },
   {
     title: "Github",
