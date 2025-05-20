@@ -44,12 +44,12 @@ export const BentoGridItem = ({
         `w-full relative overflow-hidden
         rounded-3xl group/bento hover:shadow-xl
         transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col
-        border border-white/[0.1]`,
+        border border-gray-700/50`,
         className
       )}
       style={{
-        background: 'rgb(2,0,36)',
-        backgroundImage: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,28,45,1) 35%, rgba(0,212,255,1) 100%)',
+        background: 'rgb(17,24,39)',
+        backgroundImage: 'linear-gradient(90deg, rgba(17,24,39,1) 0%, rgba(31,41,55,1) 50%, rgba(55,65,81,1) 100%)',
         minHeight: 'auto'
       }}
     >
@@ -58,17 +58,17 @@ export const BentoGridItem = ({
           titleClassName,
           'group-hover/bento:translate-x-2 transition duration-200 relative flex flex-col w-full h-full px-4 sm:px-6 md:px-8 py-8 sm:py-10'
         )}>
-          <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-sm lg:text-base z-10">
+          <div className="font-sans font-extralight text-gray-300 text-sm md:text-sm lg:text-base z-10">
             {description}
           </div>
-          <div className="font-sans font-bold text-lg lg:text-2xl z-10 mb-6">
+          <div className="font-sans font-bold text-white text-lg lg:text-2xl z-10 mb-6">
             {title}
           </div>
           {id === 3 && (
             <div className="w-full mt-auto relative">
               {/* Glow effect background */}
               {hoveredSkill && (
-                <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-3xl transition-all duration-300 z-0"></div>
+                <div className="absolute inset-0 bg-indigo-500/10 blur-xl rounded-3xl transition-all duration-300 z-0"></div>
               )}
               
               <div className="flex flex-wrap gap-2.5 sm:gap-3 relative z-10">
@@ -79,8 +79,8 @@ export const BentoGridItem = ({
                       rounded-full whitespace-nowrap
                       transition-all duration-300 transform
                       ${hoveredSkill === skill 
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white scale-110 shadow-lg shadow-cyan-500/50 font-medium border-none' 
-                        : 'bg-[#10132E]/80 text-white/90 border border-white/10 hover:border-cyan-500/50'}
+                        ? 'bg-gradient-to-r from-indigo-400 to-purple-500 text-white scale-110 shadow-md shadow-indigo-500/20 font-medium border-none' 
+                        : 'bg-[#1f2937]/90 text-gray-200 border border-gray-700 hover:border-indigo-400/30'}
                       ${hoveredSkill && hoveredSkill !== skill ? 'opacity-50' : 'opacity-100'}
                     `}
                     onMouseEnter={() => setHoveredSkill(skill)}
@@ -92,7 +92,7 @@ export const BentoGridItem = ({
               </div>
               
               {/* Bottom glow line */}
-              <div className="h-px w-full mt-6 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+              <div className="h-px w-full mt-6 bg-gradient-to-r from-transparent via-indigo-400/30 to-transparent"></div>
             </div>
           )}
         </div>
