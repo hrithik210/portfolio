@@ -7,14 +7,14 @@ const Grid = () => {
     <section>
       <BentoGrid className="w-full py-20">
         
-        { gridItems.map( ({id , title , description , className , imgClassName
+        { gridItems.map( ({id , title , className , imgClassName
           ,titleClassName , img , spareImg
         }) => (
             <BentoGridItem 
             id={id} 
             key={id} 
             title={title} 
-            description={description}
+            description=""
             className={className}
             img= {img}
             imgClassName={imgClassName}
