@@ -14,7 +14,7 @@ const socialLinks = [
     title: "Github",
     icon: <Github />,
     href: "https://github.com/hrithik210"
-  },👋
+  },
   {
     title: "Twitter",
     icon: <Twitter />,
