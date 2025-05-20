@@ -57,6 +57,6 @@ export const navItems = [
 export const skills = [
     'Golang','JavaScript', 'TypeScript','Python', 'React','Next.js', 'Tailwind', 
     'Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Prisma', 'Docker',
-    'MySQL', 'Git', 'GitHub' ,'Python', 'HTML', 'CSS',
+    'MySQL', 'Git', 'GitHub' , 'HTML', 'CSS',
     'AWS','REDIS', 'Cloudflare workers'
   ]
