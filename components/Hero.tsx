@@ -39,11 +39,11 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-[#0a0a1e] to-[#1a1a3a] overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-b from-[#000000] to-[#1e1e1f] overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] -z-10" />
-        <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-purple-900/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-[#070714] to-transparent" />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-900/20 to-transparent" />
       </div>
 

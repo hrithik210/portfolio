@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/tengen.jpg" sizes="any" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}>
         <ThemeProvider
               attribute="class"
               defaultTheme="dark"
