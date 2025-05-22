@@ -3,8 +3,7 @@
 import { FileText, Github, Linkedin, Mail, Twitter } from "lucide-react"
 import { IconBrandLeetcode } from "@tabler/icons-react"
 import Image from "next/image"
-import { BentoGrid, BentoGridItem } from './ui/Bento-grid'
-import { gridItems } from '@/data/grid-items'
+import Grid from "./Grid"
 
 const socialLinks = [
   {
@@ -122,41 +121,6 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section className="relative py-24 bg-gradient-to-b from-black to-gray-900/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Skills & Tech Stack
-            </h3>
-            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-              Technologies and tools I work with to bring ideas to life
-            </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full" />
-          </div>
-
-          {/* Skills Grid */}
-          <div className="max-w-6xl mx-auto">
-            <BentoGrid className="grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {gridItems.map(({id, title, className, imgClassName, titleClassName, img, spareImg}) => (
-                <BentoGridItem
-                  id={id}
-                  key={id}
-                  title={title}
-                  description=""
-                  className={`${className} h-32 md:h-36 bg-gray-900/30 border border-gray-800/50 hover:border-purple-500/30 transition-all duration-300 hover:bg-gray-800/30 hover:scale-105 backdrop-blur-sm rounded-xl`}
-                  img={img}
-                  imgClassName={`${imgClassName} opacity-70 group-hover:opacity-90 transition-opacity`}
-                  titleClassName={`${titleClassName} text-base md:text-lg font-medium text-gray-200 group-hover:text-purple-300 transition-colors`}
-                  spareImg={spareImg}
-                />
-              ))}
-            </BentoGrid>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
