@@ -1,6 +1,7 @@
 'use client'
 
 import { FileText, Github, Linkedin, Mail, Twitter } from "lucide-react"
+import Image from "next/image"
 
 const socialLinks = [
   {
@@ -43,7 +44,7 @@ export default function Hero() {
       
       {/* Animated particles/stars */}
       <div className="absolute inset-0">
-        {[...Array(50)].map((_, i) => (
+        {typeof window !== 'undefined' && [...Array(50)].map((_, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-white rounded-full opacity-20"
@@ -71,34 +72,34 @@ export default function Hero() {
             <div className="max-w-3xl space-y-12 text-center lg:text-left">
               <div className="space-y-8">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-                  <span className="bg-gradient-to-r from-purple-400 via-purple-200 to-white bg-clip-text text-transparent drop-shadow-2xl">
+                  <span className="bg-gradient-to-r from-purple via-gray-400 to-white bg-clip-text text-transparent drop-shadow-2xl">
                     Bonjour
                   </span>
                   <span className="ml-6 inline-block animate-bounce text-4xl">👋</span>
                 </h1>
                 
                 <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight">
-                  <span className="bg-gradient-to-r from-white via-purple-100 to-purple-300 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-white via-purple to-white bg-clip-text text-transparent">
                     I'm{' '}
                   </span>
-                  <span className="bg-gradient-to-r from-purple-400 via-purple-200 to-white bg-clip-text text-transparent relative">
+                  <span className="bg-gradient-to-r from-purple via-gray-400 to-white bg-clip-text text-transparent relative">
                     Hrithik
                     <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-purple-400 to-transparent rounded-full"></div>
                   </span>
                 </h2>
 
                 <p className="text-2xl sm:text-3xl leading-relaxed">
-                  <span className="bg-gradient-to-r from-gray-300 via-white to-purple-200 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-gray-300 via-white to-purple bg-clip-text text-transparent">
                     A Full Stack{' '}
                   </span>
-                  <span className="bg-gradient-to-r from-purple-400 via-purple-200 to-white bg-clip-text text-transparent font-semibold relative">
+                  <span className="bg-gradient-to-r from-purple via-purple-200 to-white bg-clip-text text-transparent font-semibold relative">
                     Developer
                     <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-transparent rounded-full"></div>
                   </span>
-                  <span className="bg-gradient-to-r from-white via-purple-100 to-purple-300 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-white via-purple to-white bg-clip-text text-transparent">
                     {' '}exploring the future of{' '}
                   </span>
-                  <span className="bg-gradient-to-r from-purple-400 via-purple-200 to-white bg-clip-text text-transparent font-semibold relative">
+                  <span className="bg-gradient-to-r from-purple via-gray-400 to-white bg-clip-text text-transparent font-semibold relative">
                     Web3
                     <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-transparent rounded-full"></div>
                   </span>
@@ -127,7 +128,7 @@ export default function Hero() {
                         {link.icon}
                       </div>
                       
-                      <span className="absolute -bottom-14 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 text-sm bg-gradient-to-r from-purple-400 via-purple-200 to-white bg-clip-text text-transparent bg-black/90 px-4 py-3 rounded-xl whitespace-nowrap border border-purple-500/30 backdrop-blur-sm">
+                      <span className="absolute -bottom-14 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 text-sm bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent bg-black/90 px-4 py-3 rounded-xl whitespace-nowrap border border-purple-500/30 backdrop-blur-sm">
                         {link.title}
                         <div className="absolute -top-1.5 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-black/90 border-l border-t border-purple-500/30 rotate-45"></div>
                       </span>
@@ -147,8 +148,15 @@ export default function Hero() {
                 {/* Majestic border */}
                 <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-purple-500/30 shadow-2xl shadow-purple-900/50 backdrop-blur-sm">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/20 via-transparent to-violet-600/20 opacity-0 hover:opacity-100 transition-opacity duration-1000"></div>
-                  <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-black/40 flex items-center justify-center text-8xl">
-                    👤
+                  <div className="w-full h-full bg-gradient-to-br from-purple to-white flex items-center justify-center text-8xl">
+                    <Image
+                      src="/aizen_sosuke.jpg"
+                      alt="Profile"
+                      className="rounded-full object-cover w-full h-full"
+                      width={450}
+                      height={450}
+                      priority
+                    />
                   </div>
                 </div>
                 
